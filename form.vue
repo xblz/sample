@@ -5,40 +5,31 @@
       <x-form :config="formConfig" style="margin-top: 10px;"></x-form>
     </div>
     <el-row style="margin: 10px;padding:10px;border: 1px solid #e7ecf1">
-      <el-col :span="12">
+      <el-col :span="10">
         <span>html示例：</span>
         <textarea class="code-textarea" rows="2" readonly>
            <x-form :config="formConfig"></x-form>
         </textarea>
       </el-col>
-      <el-col :span="12">
+      <el-col :span="14">
         <span>script示例：</span>
-        <textarea class="code-textarea" rows="45" readonly>
+        <textarea class="code-textarea" rows="35" readonly>
           export default {
             data() {
               return {
                 formConfig: {
                   params: [
-                    {
-                      type: "input",
-                      param: "name",
-                      label: "姓名",
-                      defValue: "",
-                      placeholder: "请输入姓名"
-                    }, {
-                      type: "date",
-                      param: "date",
-                      label: "日期",
-                      defValue: "",
-                      placeholder: "请选择日期"
-                    }, {
-                      type: "select",
-                      param: "gender",
-                      label: "性别",
-                      defValue: "",
-                      placeholder: "请选择性别",
-                      options: [{label: "男", value: "1"}, {label: "女", value: "0"}],
-                    }
+                    [
+                      {type: "input", param: "name", label: "姓名", defValue: "", placeholder: "请输入姓名"},
+                    ],
+                    [
+                      {type: "input", param: "name1", label: "姓名", defValue: "", placeholder: "请输入姓名"},
+                      {type: "date", param: "date", label: "出生日期", defValue: "", placeholder: "请选择出生日期"},
+                    ], [
+                      {type: "input", param: "name2", label: "姓名", defValue: "", placeholder: "请输入姓名"},
+                      {type: "date", param: "date1", label: "日期", defValue: "", placeholder: "请选择日期"},
+                      {type: "select", param: "gender1", label: "性别", defValue: "", placeholder: "请选择性别", options: [{label: "男", value: "1"}, {label: "女", value: "0"}]}
+                    ],
                   ],
                   data: {},
                   //
@@ -67,26 +58,17 @@
       return {
         formConfig: {
           params: [
-            {
-              type: "input",
-              param: "name",
-              label: "姓名",
-              defValue: "",
-              placeholder: "请输入姓名"
-            }, {
-              type: "date",
-              param: "date",
-              label: "日期",
-              defValue: "",
-              placeholder: "请选择日期"
-            }, {
-              type: "select",
-              param: "gender",
-              label: "性别",
-              defValue: "",
-              placeholder: "请选择性别",
-              options: [{label: "男", value: "1"}, {label: "女", value: "0"}],
-            }
+            [
+              {type: "input", param: "name", label: "姓名", defValue: "", placeholder: "请输入姓名"},
+            ],
+            [
+              {type: "input", param: "name1", label: "姓名", defValue: "", placeholder: "请输入姓名"},
+              {type: "date", param: "date", label: "出生日期", defValue: "", placeholder: "请选择出生日期"},
+            ], [
+              {type: "input", param: "name2", label: "姓名", defValue: "", placeholder: "请输入姓名"},
+              {type: "date", param: "date1", label: "日期", defValue: "", placeholder: "请选择日期"},
+              {type: "select", param: "gender1", label: "性别", defValue: "", placeholder: "请选择性别", options: [{label: "男", value: "1"}, {label: "女", value: "0"}]}
+            ],
           ],
           data: {},
           //

@@ -5,13 +5,13 @@
       <x-content :config="contentConfig" style="margin-top: 10px;"></x-content>
     </div>
     <el-row style="margin: 10px;padding:10px;border: 1px solid #e7ecf1">
-      <el-col :span="12">
+      <el-col :span="10">
         <span>html示例：</span>
         <textarea class="code-textarea" rows="2" readonly>
           <x-content :config="contentConfig"></x-content>
         </textarea>
       </el-col>
-      <el-col :span="12">
+      <el-col :span="14">
         <span>script示例：</span>
         <textarea class="code-textarea" rows="30" readonly>
           export default {
