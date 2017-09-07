@@ -20,22 +20,16 @@
                 formConfig: {
                   params: [
                     [
-                      {type: "input", param: "input", label: "输入框", placeholder: "请输入内容"},
                       {type: "switch", param: "switch", label: "开关", onValue: true, offValue: false},
-                      {},
-                      {}
-                    ],
-                    [
-                      {type: "select", param: "select", label: "选择器", placeholder: "请选择内容", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项三", value: "3"}]},
                       {type: "radio", param: "radio", label: "单选框", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}]},
-                      {},
-                      {}
+                      {type: "checkbox", param: "checkbox", label: "多选框", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项三", value: "3"}]},
+                      {type: "select", param: "select", label: "选择器", placeholder: "请选择内容", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项三", value: "3"}]}
                     ],
                     [
-                      {type: "date", param: "date", label: "日期", placeholder: "请选择日期"},
-                      {type: "checkbox", param: "checkbox", label: "多选框", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项一三", value: "3"}]},
-                      {},
-                      {}
+                      {type: "input", param: "input", label: "输入框", placeholder: "请输入内容"},
+                      {type: "time", param: "time", label: "时间选择器", placeholder: "请选择时间", option: {start: '00:00', step: '00:10', end: '23:50'}},
+                      {type: "date", param: "date", label: "日期选择器", placeholder: "请选择日期"},
+                      {type: "datetime", param: "datetime", label: "日期时间选择器", placeholder: "请选择具体时间"},
                     ],
                     [
                       {type: "textarea", param: "textarea", label: "文本框", placeholder: "请输入内容"},
@@ -70,22 +64,16 @@
         formConfig: {
           params: [
             [
-              {type: "input", param: "input", label: "输入框", placeholder: "请输入内容"},
               {type: "switch", param: "switch", label: "开关", onValue: true, offValue: false},
-              {},
-              {}
-            ],
-            [
-              {type: "select", param: "select", label: "选择器", placeholder: "请选择内容", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项三", value: "3"}]},
               {type: "radio", param: "radio", label: "单选框", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}]},
-              {},
-              {}
+              {type: "checkbox", param: "checkbox", label: "多选框", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项三", value: "3"}]},
+              {type: "select", param: "select", label: "选择器", placeholder: "请选择内容", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项三", value: "3"}]}
             ],
             [
-              {type: "date", param: "date", label: "日期", placeholder: "请选择日期"},
-              {type: "checkbox", param: "checkbox", label: "多选框", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项一三", value: "3"}]},
-              {},
-              {}
+              {type: "input", param: "input", label: "输入框", placeholder: "请输入内容"},
+              {type: "time", param: "time", label: "时间选择器", placeholder: "请选择时间", option: {start: '00:00', step: '00:10', end: '23:50'}},
+              {type: "date", param: "date", label: "日期选择器", placeholder: "请选择日期"},
+              {type: "datetime", param: "datetime", label: "日期时间选择器", placeholder: "请选择具体时间"},
             ],
             [
               {type: "textarea", param: "textarea", label: "文本框", placeholder: "请输入内容"},
