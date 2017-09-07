@@ -5,31 +5,42 @@
       <x-form :config="formConfig" style="margin-top: 10px;"></x-form>
     </div>
     <el-row style="margin: 10px;padding:10px;border: 1px solid #e7ecf1">
-      <el-col :span="10">
+      <el-col :span="8">
         <span>html示例：</span>
         <textarea class="code-textarea" rows="2" readonly>
            <x-form :config="formConfig"></x-form>
         </textarea>
       </el-col>
-      <el-col :span="14">
+      <el-col :span="16">
         <span>script示例：</span>
-        <textarea class="code-textarea" rows="35" readonly>
+        <textarea class="code-textarea" rows="45" readonly>
           export default {
             data() {
               return {
                 formConfig: {
                   params: [
                     [
-                      {type: "input", param: "name", label: "姓名", defValue: "", placeholder: "请输入姓名"},
+                      {type: "input", param: "input", label: "输入框", placeholder: "请输入内容"},
+                      {type: "switch", param: "switch", label: "开关", onValue: true, offValue: false},
+                      {},
+                      {}
                     ],
                     [
-                      {type: "input", param: "name1", label: "姓名", defValue: "", placeholder: "请输入姓名"},
-                      {type: "date", param: "date", label: "出生日期", defValue: "", placeholder: "请选择出生日期"},
-                    ], [
-                      {type: "input", param: "name2", label: "姓名", defValue: "", placeholder: "请输入姓名"},
-                      {type: "date", param: "date1", label: "日期", defValue: "", placeholder: "请选择日期"},
-                      {type: "select", param: "gender1", label: "性别", defValue: "", placeholder: "请选择性别", options: [{label: "男", value: "1"}, {label: "女", value: "0"}]}
+                      {type: "select", param: "select", label: "选择器", placeholder: "请选择内容", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项三", value: "3"}]},
+                      {type: "radio", param: "radio", label: "单选框", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}]},
+                      {},
+                      {}
                     ],
+                    [
+                      {type: "date", param: "date", label: "日期", placeholder: "请选择日期"},
+                      {type: "checkbox", param: "checkbox", label: "多选框", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项一三", value: "3"}]},
+                      {},
+                      {}
+                    ],
+                    [
+                      {type: "textarea", param: "textarea", label: "文本框", placeholder: "请输入内容"},
+                      {},
+                    ]
                   ],
                   data: {},
                   //
@@ -59,16 +70,27 @@
         formConfig: {
           params: [
             [
-              {type: "input", param: "name", label: "姓名", defValue: "", placeholder: "请输入姓名"},
+              {type: "input", param: "input", label: "输入框", placeholder: "请输入内容"},
+              {type: "switch", param: "switch", label: "开关", onValue: true, offValue: false},
+              {},
+              {}
             ],
             [
-              {type: "input", param: "name1", label: "姓名", defValue: "", placeholder: "请输入姓名"},
-              {type: "date", param: "date", label: "出生日期", defValue: "", placeholder: "请选择出生日期"},
-            ], [
-              {type: "input", param: "name2", label: "姓名", defValue: "", placeholder: "请输入姓名"},
-              {type: "date", param: "date1", label: "日期", defValue: "", placeholder: "请选择日期"},
-              {type: "select", param: "gender1", label: "性别", defValue: "", placeholder: "请选择性别", options: [{label: "男", value: "1"}, {label: "女", value: "0"}]}
+              {type: "select", param: "select", label: "选择器", placeholder: "请选择内容", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项三", value: "3"}]},
+              {type: "radio", param: "radio", label: "单选框", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}]},
+              {},
+              {}
             ],
+            [
+              {type: "date", param: "date", label: "日期", placeholder: "请选择日期"},
+              {type: "checkbox", param: "checkbox", label: "多选框", options: [{label: "选项一", value: "1"}, {label: "选项二", value: "2"}, {label: "选项一三", value: "3"}]},
+              {},
+              {}
+            ],
+            [
+              {type: "textarea", param: "textarea", label: "文本框", placeholder: "请输入内容"},
+              {},
+            ]
           ],
           data: {},
           //

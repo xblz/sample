@@ -89,9 +89,9 @@
     },
     /* 页面加载结束监听 */
     created: function () {
-      let self = this;
+      const context = this;
       this.getListData("/sample/list", {}, function (data) {
-        self.tableConfig.data = data.data;
+        context.tableConfig.data = data.data;
       })
     },
     data() {
