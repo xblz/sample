@@ -80,7 +80,7 @@
 
   export default {
     methods: {
-      getSmsList() {
+      getSampleList() {
         var self = this;
         var params = {};
         params.pageSize = 10;
@@ -90,7 +90,7 @@
       }
     },
     created: function () {
-      this.getSmsList()
+      this.getSampleList()
     },
     data() {
       return {

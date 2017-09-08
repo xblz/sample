@@ -16,11 +16,10 @@
 <script>
 
   import {getListData} from "../../api/sampleApi"
-  import {confirmDialog} from "../../common/dialogUtil"
 
   export default {
     methods: {
-      getSmsList() {
+      getSampleList() {
         var self = this;
         var params = {};
         params.pageSize = self.paginationConfig.pageSize;
@@ -32,7 +31,7 @@
       }
     },
     created: function () {
-      this.getSmsList()
+      this.getSampleList()
     },
     data() {
       const context = this;
@@ -56,29 +55,25 @@
           // 查询按钮点击事件
           onSearch(obj) {
             console.log(JSON.stringify(obj));
-            context.getSmsList();
+            context.getSampleList();
           }
         },
         tableConfig: {
           // 列表内容
           params: [
             {
-              label: "默认()",
+              label: "姓名",
               prop: "name",
             }, {
-              label: "文字(label)",
+              label: "居住地址",
               prop: "address",
               type: "label"
             }, {
-              label: "开关(switch)",
-              prop: "switch",
-              type: "switch"
-            }, {
-              label: "日期(date)",
+              label: "入职日期",
               prop: "date",
               type: "date"
             }, {
-              label: "链接类(href)",
+              label: "个人主页",
               prop: "href",
               type: "href",
               action(index, obj) {
@@ -113,11 +108,11 @@
           pageSizes: [10, 20, 50, 100],
           handleSizeChange(pageSize) {
             context.paginationConfig.pageSize = pageSize;
-            context.getSmsList();
+            context.getSampleList();
           },
           handleCurrentChange(pageNum) {
             context.paginationConfig.page = pageNum;
-            context.getSmsList();
+            context.getSampleList();
           }
         }
       }
