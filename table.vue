@@ -1,18 +1,18 @@
 <template>
   <div>
     <div style="margin: 10px;padding:10px;border: 1px solid #e7ecf1">
-      <span>列表数据</span>
+      <span>列表信息</span>
       <x-table :config="tableConfig" style="margin-top: 10px;"></x-table>
     </div>
 
     <el-row style="margin: 10px;padding:10px;border: 1px solid #e7ecf1">
-      <el-col :span="10">
+      <el-col :span="8">
         <span>html示例：</span>
         <textarea class="code-textarea" rows="2" readonly>
            <x-table :config="tableConfig"></x-table>
         </textarea>
       </el-col>
-      <el-col :span="14">
+      <el-col :span="16">
         <span>script示例：</span>
         <textarea class="code-textarea" rows="55" readonly>
         export default {
@@ -75,24 +75,22 @@
 
 <script>
 
-  import {httpGet} from "./../../common/httpUtil"
-  import {formatDate} from "./../../common/dateUtil"
-
-  import sampleMock from "./../../mock/sampleMock"
+  import {getListData} from "../../api/sampleApi"
 
 
   export default {
     methods: {
-      getListData(url, data, func) {
-        httpGet(url, data, func)
+      getSmsList() {
+        var self = this;
+        var params = {};
+        params.pageSize = 10;
+        getListData(params, function (data) {
+          self.tableConfig.data = data.data;
+        })
       }
     },
-    /* 页面加载结束监听 */
     created: function () {
-      const context = this;
-      this.getListData("/sample/list", {}, function (data) {
-        context.tableConfig.data = data.data;
-      })
+      this.getSmsList()
     },
     data() {
       return {
