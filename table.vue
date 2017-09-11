@@ -28,6 +28,10 @@
                     prop: "address",
                     type: "label"
                   }, {
+                    label: "文字(带有adapter)",
+                    prop: "gender",
+                    adapter: {0: "男", 1: "女"}
+                  }, {
                     label: "开关(switch)",
                     prop: "switch",
                     type: "switch"
@@ -35,13 +39,6 @@
                     label: "日期(date)",
                     prop: "date",
                     type: "date"
-                  }, {
-                    label: "链接类(href)",
-                    prop: "href",
-                    type: "href",
-                    action(index, obj) {
-                      alert(index + JSON.stringify(obj));
-                    }
                   }, {
                     label: "按钮操作(button)",
                     type: "button",
@@ -103,7 +100,10 @@
             }, {
               label: "文字(label)",
               prop: "address",
-              type: "label"
+            }, {
+              label: "文字(label)",
+              prop: "gender",
+              adapter: {0: "男", 1: "女"}
             }, {
               label: "开关(switch)",
               prop: "switch",
@@ -113,15 +113,9 @@
               prop: "date",
               type: "date"
             }, {
-              label: "链接类(href)",
-              prop: "href",
-              type: "href",
-              action(index, obj) {
-                alert(index + JSON.stringify(obj));
-              }
-            }, {
               label: "按钮操作(button)",
               type: "button",
+              prop: "href",
               buttons: [
                 {
                   text: "修改",
